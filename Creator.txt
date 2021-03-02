@@ -45,7 +45,7 @@ rule "Primo VE Display - Creator 111 Block 17/18"
 priority 30
 	when
 		MARC."111" has any "a,c,d,e,n,j,q" AND NOT
-        MARC."110"."9" match "N"
+        MARC."111"."9" match "N"
 	then
 		set TEMP"1" to MARC."111" sub without sort "a,c,d,e,n,j,q"
 		set TEMP"2" to MARC."111" sub without sort "a,e,q"
@@ -63,7 +63,7 @@ rule "Primo VE Display - alternate creator 880-100 Block 1&2"
 priority 10
 	when
 		MARC."880" has any "a,b,c,d,e,j,q,u" AND NOT
-        MARC."110"."9" match "N" AND
+        MARC."880"."6" match "110-.*" AND
         MARC is "100"
 	then
 	      set TEMP"1" to MARC."880" sub without sort "a,b,c,d,e,j,q,u"
