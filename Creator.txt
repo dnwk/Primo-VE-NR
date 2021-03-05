@@ -42,7 +42,7 @@ priority 20
         remove substring using regex (TEMP"1","[,.]")
 		
 		set TEMP"5" to MARC."100" sub without sort "q"
-		set TEMP"6" to MARC."100" sub without sort "b,c,d,e,j,u"
+		set TEMP"6" to MARC."100" sub without sort "d,e,j,u"
 		remove substring using regex (TEMP"6","(/|:|;|=|,)+$")
 		concatenate with delimiter (TEMP"1",TEMP"5","")
 		concatenate with delimiter (TEMP"1",TEMP"6","")
