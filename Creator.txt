@@ -25,7 +25,7 @@ end
 rule "Primo VE Display - Creator 100 - Developernetwork block 7 with FirstName LastName fix"
 priority 10
     when
-        MARC."100" has any "a,b,c"
+        MARC."100" has any "a,b,c,d"
     then
         set TEMP"1" to MARC."100" sub without sort "a"
         set TEMP"2" to MARC."100" sub without sort "a"
